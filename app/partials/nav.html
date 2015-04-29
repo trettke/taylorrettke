@@ -1,0 +1,16 @@
+<div ng-controller="NavCtrl">
+
+  <div ng-class="{revealed : navShowing}" class="nav col-lg-2 col-md-2 col-sm-3 col-xs-12">
+    <ul ng-click="">
+      <li><a ng-class="{current : currentParent === ''}" href="#/"><i class="fa fa-lg fa-caret-right"></i> Home</a></li>
+      <li><a ng-class="{current : currentParent === 'blog'}"  href="#/blog"><i class="fa fa-lg fa-caret-right"></i> Blog</a></li>
+      <li><a ng-class="{current : currentParent === 'work'}" href="#/work"><i class="fa fa-lg fa-caret-right"></i> Work</a></li>
+      <li><a ng-class="{current : currentParent === 'me'}" href="#/me"><i class="fa fa-lg fa-caret-right"></i> Me</a></li>
+    </ul>
+  </div>
+
+  <div ng-click="toggleNav()" ng-class="{revealed : navShowing}" class="menu-button">
+    <a><i class="fa fa-bars"></i></a>
+  </div>
+
+</div>

@@ -1,0 +1,17 @@
+<div class="blog-template">
+  <div ng-click="showPath();" class="header-img" back-img="{{blogPosts[currentArticle].Image}}"></div>
+
+  <div class="content">
+    <h1>{{blogPosts[currentArticle].Title}}</h1>
+    <p class="small grey">by {{blogPosts[currentArticle].Author}} - {{blogPosts[currentArticle].Date}}</p>
+
+    <ng-include src="blogPosts[currentArticle].Article"></ng-include>
+
+  </div>
+
+  <div class="bottom-controls">
+    <div class="control left"><a ng-href="#/blog/{{blogPosts[currentArticle - 1].Name}}"><i class="fa fa-angle-left"></i> Previous Post</a></div>
+    <div class="control right"><a ng-href="#/blog/{{blogPosts[currentArticle + 1].Name}}">Next Post <i class="fa fa-angle-right"></i></a></div>
+  </div>
+
+</div>

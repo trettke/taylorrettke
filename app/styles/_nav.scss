@@ -1,0 +1,92 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: $nav-width;
+  background: $dark-1;
+
+
+  ul {
+    font-family: $heading-font;
+    font-size: $large-font;
+    text-transform: uppercase;
+
+    padding-left: 0;
+    margin-left: 15px;
+    margin-top: $top-of-page-margin;
+
+    li {
+      list-style: none;
+      margin-bottom: $small-margin;
+
+      a {
+        color: white;
+        font-weight: $bold;
+        text-decoration: none;
+
+        i {
+          color: $dark-opaque;
+          transition: color 0.2s;
+        }
+      }
+
+      a.current {
+        i {
+          color: white;
+        }
+      }
+
+      a:hover {
+        i {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.menu-button {
+  display: none;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+
+  font-size: 40px;
+  line-height: 50px;
+  padding: 10px 15px 10px 15px;
+  color: $dark-1;
+
+  background: rgba(255,255,255,0.95);
+  border-bottom: solid 1px $grey-x-light;
+
+//  background: -webkit-linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 80%, rgba(255,255,255,0) 100%); /* For Safari 5.1 to 6.0 */
+//  background: -o-linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 80%, rgba(255,255,255,0) 100%); /* For Opera 11.1 to 12.0 */
+//  background: -moz-linear-gradient(rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 80%, rgba(255,255,255,0) 100%); /* For Firefox 3.6 to 15 */
+//  background: linear-gradient(rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 80%, rgba(255,255,255,0) 100%); /* Standard syntax */
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    position: fixed;
+    left: -200px;
+    transition: left 0.5s;
+
+    z-index: 2;
+  }
+
+  .nav.revealed {
+    left: 0;
+  }
+
+
+  .menu-button {
+    display: block;
+    transition: margin-left 0.5s;
+  }
+
+  .menu-button.revealed {
+    margin-left: 200px;
+  }
+};

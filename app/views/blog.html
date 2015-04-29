@@ -1,0 +1,34 @@
+<div class="blog">
+  <h1>Blog</h1>
+
+  <div class="row">
+
+    <div
+      ng-repeat="blog in blogPosts track by $index | filter: item.Feature | orderBy: item.Date"
+      ng-class="{'two-by-one col-lg-12 col-md-12': blog.Feature, 'one-by-one col-lg-4 col-md-4': !blog.Feature}"
+      class="preview col-sm-12 col-xs-12">
+
+      <div class="preview-top-banner">
+        {{blog.Date}}
+      </div>
+
+      <div class="row">
+        <a ng-href="#/blog/{{blog.Name}}">
+          <div class="preview-image col-lg-5 col-md-5 col-sm-12 col-xs-12"
+             back-img="{{blog.PreviewImage}}"></div>
+        </a>
+
+        <div class="preview-main col-lg-7 col-md-7 col-sm-12 col-xs-12">
+          <a ng-href="#/blog/{{blog.Name}}"><h3>{{blog.Title}}</h3></a>
+          <p>{{blog.Summary}}</p>
+        </div>
+      </div>
+
+      <div class="preview-controls">
+        <a ng-href="#/blog/{{blog.Name}}">read more <i class="fa fa-lg fa-angle-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
