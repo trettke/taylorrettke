@@ -48,8 +48,8 @@
     }
 
     img {
-      width: 2 * $standard-margin-left + $paragraph-width;
-      margin: 30px -$standard-margin-left 30px ;
+      width: $paragraph-width + 30px;
+      margin: 30px 0 30px -15px;
     }
   }
 

@@ -428,7 +428,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Amazon s3 Deploy settings
     s3: {
       options: {
         bucket: process.env.DEPLOY_BUCKET,
