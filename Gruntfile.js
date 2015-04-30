@@ -419,6 +419,42 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    // Amazon s3 Deploy settings
+    s3: {
+      options: {
+        bucket: process.env.DEPLOY_BUCKET,
+        region: 'ap-southeast-2',
+        access: 'public-read',
+        maxOperations: 20
+      },
+      deploy: {
+        sync: [{
+          src: 'dist/**/*',
+          dest: '',
+          rel: 'dist',
+          options: {
+            headers: {
+              'Cache-Control': 'max-age=25920000' // 300 days
+            },
+            verify: true,
+            gzip: true,
+            gzipExclude: ['.jpg', '.jpeg', '.png', '.pdf']
+          }
+        }],
+        upload: [{
+          src: 'dist/index.html',
+          dest: 'index.html',
+          options: {
+            headers: {
+              'Cache-Control': 'no-cache, must-revalidate',
+              'Expires': 'Sat, 26 Jul 1997 05:00:00 GMT'
+            },
+            verify: true
+          }
+        }]
+      }
     }
   });
 
@@ -473,5 +509,10 @@ module.exports = function (grunt) {
     'newer:jshint',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'build',
+    's3:deploy'
   ]);
 };

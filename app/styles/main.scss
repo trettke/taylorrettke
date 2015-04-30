@@ -27,12 +27,12 @@ $grey-x-light: rgba(200,200,200,1);
 $dark-opaque: rgba(50,50,50,0);
 
 // Font Sizes
-$small-font: 1.2em;
-$medium-font: 1.8em;
-$large-font: 2.2em;
-$x-large-font: 2.6em;
+$small-font: 16px;
+$medium-font: 25px;
+$large-font: 32px;
+$x-large-font: 52px;
 
-$paragraph: 1.3em;
+$paragraph: 20px;
 
 $reduced-spacing: -0.05em;
 
@@ -54,7 +54,9 @@ $large-margin: 140px;
 
 //Widths
 $nav-width: 200px;
-$paragraph-width: 700px;
+$paragraph-width: 600px;
+$container-width: 900px;
+$narrow-container-width: 750px;
 
 
 /* GENERAL RULES
@@ -116,7 +118,7 @@ p {
 // Styles
 .container {
   width: 100%;
-  max-width: 960px;
+  max-width: $container-width;
   margin: 0 auto 0 auto;
   padding: 0 30px 0 30px;
 }
@@ -164,4 +166,4 @@ p {
 @import "preview";
 @import "blog";
 @import "work";
-@import "blog-template";
+@import "template";

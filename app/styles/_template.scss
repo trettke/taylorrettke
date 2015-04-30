@@ -1,10 +1,11 @@
 .template {
+  max-width: $narrow-container-width;
 
   .header-img {
     min-height: 300px;
     width: calc(100% - 10px);
 
-    border-bottom: solid 5px $dark-2;
+    border-bottom: solid 1px $dark-1;
     background: #DDDDDD no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -14,10 +15,11 @@
 
   .content {
     margin-bottom: 30px;
+    max-width: $paragraph-width;
 
     p {
       font-size: $paragraph;
-      max-width: $paragraph-width;
+//      max-width: $paragraph-width;
     }
 
     p.small {
@@ -44,6 +46,11 @@
 
     a:hover {
       color: $grey-light;
+    }
+
+    img {
+      width: 2 * $standard-margin-left + $paragraph-width;
+      margin: 30px -$standard-margin-left 30px ;
     }
   }
 
@@ -78,6 +85,11 @@
   @media screen and (max-width: 768px) {
     .header-img {
       display: none;
+    }
+
+    img {
+      width: 100%;
+      margin: 30px 0 30px 0;
     }
   }
 }

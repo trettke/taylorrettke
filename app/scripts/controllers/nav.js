@@ -13,7 +13,7 @@
 
 
 angular.module('taylorrettkeApp')
-  .controller('NavCtrl', function ($scope, $location) {
+  .controller('NavCtrl', function ($scope, $location, $window) {
     $scope.navShowing = false;
 
     //Find the parent directory so the nav arrow reflects it
@@ -34,7 +34,6 @@ angular.module('taylorrettkeApp')
       console.log('new location : ' + $location.url());
       $scope.navShowing = false; // hide the nav every time a new page loads
       $scope.setParent(); // set the correct parent directory for the nav
-      setTimeout(window.scrollTo(0,0),1000);
     });
 
     // Toggles the nav menu in and our on small devices
@@ -42,5 +41,10 @@ angular.module('taylorrettkeApp')
       $scope.navShowing = !$scope.navShowing;
       console.log($scope.navShowing ? 'Nav is shown' : 'Nav is hidden');
     };
+
+    // Track view changes in Google Analytics
+    $scope.$on('$viewContentLoaded', function() {
+      $window.ga('send', 'pageview', {page: $location.url()});
+    });
 
   });

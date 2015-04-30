@@ -26,7 +26,7 @@ angular.module('taylorrettkeApp')
     };
 
     $scope.nextPage = function () {
-
+      $scope.currentArticle = $scope.blogPosts.length - 1 > $scope.currentArticle ? $scope.currentArticle + 1 : $scope.currentArticle;
     };
 
   });
