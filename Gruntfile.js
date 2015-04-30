@@ -505,6 +505,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('deploy', [
     'build',
-    's3:deploy'
+    'aws_s3:deploy'
   ]);
 };
