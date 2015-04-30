@@ -15,11 +15,10 @@
 
   .content {
     margin-bottom: 30px;
-    max-width: $paragraph-width;
 
     p {
       font-size: $paragraph;
-//      max-width: $paragraph-width;
+      max-width: $paragraph-width;
     }
 
     p.small {

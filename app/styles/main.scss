@@ -1,9 +1,9 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
-@import "components-font-awesome/scss/font-awesome.scss";
 // endbower
 @import "compass";
+@import "font-awesome/scss/font-awesome.scss";
 
 
 /* GLOBAL VARIABLES
@@ -27,10 +27,10 @@ $grey-x-light: rgba(200,200,200,1);
 $dark-opaque: rgba(50,50,50,0);
 
 // Font Sizes
-$small-font: 16px;
-$medium-font: 25px;
-$large-font: 32px;
-$x-large-font: 52px;
+$small-font: 14px;
+$medium-font: 23px;
+$large-font: 29px;
+$x-large-font: 47px;
 
 $paragraph: 20px;
 
