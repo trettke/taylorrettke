@@ -1,7 +1,6 @@
 # taylorrettke
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+My personal site for hosting my blog, work and personal information.
 
 ## Build & development
 

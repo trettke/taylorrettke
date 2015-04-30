@@ -1,11 +1,13 @@
-<div class="blog">
-  <h1>Blog</h1>
+<div class="blog section">
+  <div class="row">
+    <h1 class="page-heading">Blog</h1>
+  </div>
 
   <div class="row">
 
     <div
       ng-repeat="blog in blogPosts track by $index | filter: item.Feature | orderBy: item.Date"
-      ng-class="{'two-by-one col-lg-12 col-md-12': blog.Feature, 'one-by-one col-lg-4 col-md-4': !blog.Feature}"
+      ng-class="{'two-by-one col-lg-8 col-md-8': blog.Feature, 'one-by-one col-lg-4 col-md-4': !blog.Feature}"
       class="preview col-sm-12 col-xs-12">
 
       <div class="preview-top-banner">

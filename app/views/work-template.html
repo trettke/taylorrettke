@@ -1,0 +1,22 @@
+<div class="template section">
+  <div class="header-img" back-img="{{workProjects[currentProject].Image}}"></div>
+
+  <div class="content">
+    <h1>{{workProjects[currentProject].Title}}</h1>
+    <p  class="small grey">
+      <i class="fa fa-link"></i> -
+      <a target="_blank" ng-href="{{workProjects[currentProject].Link}}">{{workProjects[currentProject].Link}}</a>
+    <br/>
+      by {{workProjects[currentProject].Author}}
+    </p>
+
+    <ng-include src="workProjects[currentProject].Project"></ng-include>
+
+  </div>
+
+  <div class="bottom-controls">
+    <div class="control left"><a ng-href="#/blog/{{workProjects[currentProject - 1].Name}}"><i class="fa fa-angle-left"></i> Previous Post</a></div>
+    <div class="control right"><a ng-href="#/blog/{{workProjects[currentProject + 1].Name}}">Next Post <i class="fa fa-angle-right"></i></a></div>
+  </div>
+
+</div>

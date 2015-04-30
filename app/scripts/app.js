@@ -31,6 +31,14 @@ angular
         templateUrl: 'views/blog-template.html',
         controller: 'BlogCtrl'
       })
+      .when('/work', {
+        templateUrl: 'views/work.html',
+        controller: 'WorkCtrl'
+      })
+      .when('/work/:project', {
+        templateUrl: 'views/work-template.html',
+        controller: 'WorkCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

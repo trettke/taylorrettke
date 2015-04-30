@@ -1,0 +1,36 @@
+<div class="work section">
+  <div class="row">
+    <h1 class="page-heading">Work</h1>
+  </div>
+
+  <div class="row">
+
+    <div
+      ng-repeat="project in workProjects track by $index"
+      ng-class="{'two-by-one col-lg-8 col-md-8': project.Feature, 'one-by-one col-lg-4 col-md-4': !project.Feature}"
+      class="preview col-sm-12 col-xs-12">
+
+      <div class="preview-top-banner">
+        {{project.Date}}
+      </div>
+
+      <div class="row">
+        <a ng-href="#/work/{{project.Name}}">
+          <div class="preview-image col-lg-5 col-md-5 col-sm-12 col-xs-12"
+               back-img="{{project.PreviewImage}}"></div>
+        </a>
+
+        <div class="preview-main col-lg-7 col-md-7 col-sm-12 col-xs-12">
+          <a ng-href="#/work/{{project.Name}}"><h3>{{project.Title}}</h3></a>
+          <p>{{project.Summary}}</p>
+        </div>
+      </div>
+
+      <div class="preview-controls">
+        <a ng-href="#/blog/{{project.Name}}">read more <i class="fa fa-lg fa-angle-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+</div>

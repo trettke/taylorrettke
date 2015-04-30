@@ -8,15 +8,8 @@
  * Controller of the taylorrettkeApp
  */
 angular.module('taylorrettkeApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, blogPosts) {
 
-    $scope.showLocation = function () {
-      var location = $scope.$location.url();
-      console.log(location);
-    };
+
+
   });

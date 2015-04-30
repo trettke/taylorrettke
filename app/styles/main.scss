@@ -126,15 +126,32 @@ p {
   margin-left: 200px;
 }
 
+.page-heading {
+  padding: 0 0 30px 15px;
+}
+
+.section {
+  padding-top: $heading-padding;
+
+  h1 {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (max-width: 768px) {
   .container {
-    padding: $heading-padding 0 0 0;
+    padding: 0;
   }
 
   .container-wrapper {
     margin-left: 0;
     width: 100%;
+  }
+
+  .section {
+    padding-top: $heading-padding + $standard-padding;
   }
 }
 
@@ -146,4 +163,5 @@ p {
 @import "home";
 @import "preview";
 @import "blog";
+@import "work";
 @import "blog-template";

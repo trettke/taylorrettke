@@ -1,4 +1,4 @@
-.blog-template {
+.template {
 
   .header-img {
     min-height: 300px;
@@ -26,6 +26,10 @@
 
     p.grey {
       color: $grey-standard;
+    }
+
+    h1 {
+      padding-top: $standard-padding;
     }
 
     h3 {
@@ -80,9 +84,10 @@
 
 @media screen and (max-width: 768px) {
   .blog-template {
-    padding-top: $standard-padding;
+    padding-top: $heading-padding;
   }
 }
+
 
 
 
