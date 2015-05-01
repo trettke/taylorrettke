@@ -8,3 +8,4 @@ npm install
 npm install grunt-cli
 npm install bower
 bower install
+bower install --save font-awesome
