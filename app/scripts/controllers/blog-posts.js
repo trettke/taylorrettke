@@ -13,9 +13,8 @@ angular.module('taylorrettkeApp').factory('blogPosts', function() {
       Feature: true,
       Image: './images/charlie-header.jpg',
       PreviewImage: './images/charlie-preview.jpg',
-      Summary: 'I am about to begin a project, attempting to build a program that can generate ' +
-      'a \'Charlie Parker Style\' solo over a given chord progression. This posts explores the ' +
-      'reasoning and the goals of the project',
+      Summary: 'I began playing piano when I was 5 years old. My father was (and still is) a jazz musician and music teacher,' +
+      'so he had every intention of starting me early. As a result...',
       Article: './views/blog/charlie-parker-computer.html',
       Type: 'blog'
     }
