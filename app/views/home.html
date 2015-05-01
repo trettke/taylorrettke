@@ -4,57 +4,45 @@
     <h1>Thank God You're Here</h1>
     <p>I'm Taylor Rettke, and here are all my thoughts, ideas and work. <br/>
       I'm a designer, front-end developer, musician and all-round maverick creative. I'm
-      easily excitable and love talking about great ideas - so feel free to peruse this space of mine and get in
+      easily excitable and love talking about great ideas - so feel free to get in
       touch to chat about new ideas.</p>
   </div>
 </div>
 
-<div class="row">
-  <div class="page-heading">
-    <h1>Top Stories</h1>
-  </div>
-</div>
+<h1>Top Stories</h1>
 
+  <div class="row">
 
-<div class="row">
-  <div class="preview two-by-one col-lg-8 col-md-8 col-sm-12 col-xs-12">
-    <div class="preview-top-banner">
-      Blog Post
-    </div>
+    <div
+      ng-repeat="story in featureStories track by $index"
+      class="preview one-by-one col-lg-4 col-md-4 col-sm-12 col-xs-12">
 
-    <div class="row">
-      <div class="preview-image col-lg-5 col-md-5 col-sm-12 col-xs-12"
-           style="background: url('./images/charlie-preview.jpg') no-repeat center center;"></div>
-      <div class="preview-main col-lg-7 col-md-7 col-sm-12 col-xs-12">
-        <h3>The Charlie Parker Project</h3>
-        <p>This is the preview text of what the Blog Post could be</p>
+      <div ng-show="story.Article" class="preview-top-banner">
+        Blog Post
+      </div>
+
+      <div ng-show="story.Project" class="preview-top-banner">
+        Work
+      </div>
+
+      <div class="row">
+        <!--<a ng-href="#/blog/{{story.Name}}">-->
+          <!--<div class="preview-image col-lg-5 col-md-5 col-sm-12 col-xs-12"-->
+               <!--back-img="{{blog.PreviewImage}}"></div>-->
+        <!--</a>-->
+
+        <div class="preview-main col-lg-7 col-md-7 col-sm-12 col-xs-12">
+          <a ng-href="#/{{story.Type}}/{{story.Name}}"><h3>{{story.Title}}</h3></a>
+          <p>{{story.Summary}}</p>
+        </div>
+      </div>
+
+      <div class="preview-controls">
+        <a ng-href="#/{{story.Type}}/{{story.Name}}">read more <i class="fa fa-lg fa-angle-right"></i></a>
       </div>
     </div>
 
-    <div class="preview-controls">
-      <a href="">read more <i class="fa fa-lg fa-angle-right"></i></a>
-    </div>
   </div>
-
-  <div class="preview one-by-one col-lg-4 col-md-4 col-sm-6 col-xs-12">
-    <div class="preview-top-banner">
-      Blog Post
-    </div>
-
-    <div class="row">
-      <div class="preview-image col-lg-5 col-md-5 col-sm-12 col-xs-12"
-           style="background: url('./images/charlie-preview.jpg') no-repeat center center;"></div>
-      <div class="preview-main col-lg-7 col-md-7 col-sm-12 col-xs-12">
-        <h3>The Charlie Parker Project</h3>
-        <p>This is the preview text of what the Blog Post could be</p>
-      </div>
-    </div>
-
-    <div class="preview-controls">
-      <a href="">read more <i class="fa fa-lg fa-angle-right"></i></a>
-    </div>
-  </div>
-</div>
 
 </div>
 

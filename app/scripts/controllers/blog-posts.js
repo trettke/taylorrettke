@@ -16,7 +16,8 @@ angular.module('taylorrettkeApp').factory('blogPosts', function() {
       Summary: 'I am about to begin a project, attempting to build a program that can generate ' +
       'a \'Charlie Parker Style\' solo over a given chord progression. This posts explores the ' +
       'reasoning and the goals of the project',
-      Article: './views/blog/charlie-parker-computer.html'
+      Article: './views/blog/charlie-parker-computer.html',
+      Type: 'blog'
     }
   ];
 });

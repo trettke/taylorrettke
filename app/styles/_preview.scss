@@ -3,6 +3,7 @@
   position: relative;
   min-height: 360px;
   padding: 0 $half-padding 0 $half-padding;
+  margin-bottom: 50px;
   overflow: hidden;
 
   h3 {
@@ -39,7 +40,7 @@
     bottom: 0;
     width: calc(100% - 30px);
     margin-top: 10px;
-    border-bottom: solid 1px $grey-light;
+//    border-bottom: solid 1px $grey-light;
     text-align: right;
 
     a {

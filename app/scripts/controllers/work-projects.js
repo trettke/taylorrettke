@@ -17,7 +17,8 @@ angular.module('taylorrettkeApp').factory('workProjects', function() {
       Summary: 'Recyclabills are great wallets made out of recycled bonsoy milk containers. I made one for myself ' +
       'late last year, and it generated a huge number of comments and interest! So I thought I might as well ' +
       'sell them online and help out Pollinate Energy while I was at it',
-      Project: './views/work/recyclabills.html'
+      Project: './views/work/recyclabills.html',
+      Type: 'work'
     }
   ];
 });

@@ -10,7 +10,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 ------------------------------------------------------------ */
 
 // Font Styles
-$heading-font: 'Istok', sans-serif;
+$heading-font: 'Helvetica Neue', sans-serif;
 $main-font: 'Lora', serif;
 
 // Font Colors
@@ -90,7 +90,8 @@ h1 {
   font-size: $x-large-font;
   font-family: $heading-font;
   font-weight: $bold;
-  //text-transform: uppercase;
+  letter-spacing: 1px;
+//  text-transform: uppercase;
 
   color: $dark-1;
   margin: $heading-margin 0 $heading-margin 0;
@@ -100,6 +101,7 @@ h2 {
   font-size: $large-font;
   font-family: $heading-font;
   font-weight: $bold;
+  letter-spacing: 0.5px;
   //text-transform: uppercase;
 
   color: $dark-1;
@@ -161,9 +163,11 @@ p {
 /* IMPORTS
 ------------------------------------------------------------ */
 // Partials
+@import "fonts";
 @import "nav";
 @import "home";
 @import "preview";
 @import "blog";
 @import "work";
+@import "me";
 @import "template";

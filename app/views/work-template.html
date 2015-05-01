@@ -1,11 +1,15 @@
-<div class="template section">
+<div ng-hide="currentProject" class="template section">
   <div class="header-img" back-img="{{workProjects[currentProject].Image}}"></div>
 
   <div class="content">
     <h1>{{workProjects[currentProject].Title}}</h1>
     <p  class="small grey">
       <i class="fa fa-link"></i> -
-      <a target="_blank" ng-href="{{workProjects[currentProject].Link}}">{{workProjects[currentProject].Link}}</a>
+      <a ng-href="{{workProjects[currentProject].Link}}">{{workProjects[currentProject].Link}}</a><br/>
+      <span ng-hide="!workProjects[currentProject].Github" >
+        <i class="fa fa-github"></i> -
+        <a ng-href="{{workProjects[currentProject].Github}}">{{workProjects[currentProject].Github}}</a>
+      </span>
     <br/>
       by {{workProjects[currentProject].Author}}
     </p>
@@ -14,9 +18,27 @@
 
   </div>
 
-  <div class="bottom-controls">
-    <div class="control left"><a ng-href="#/blog/{{workProjects[currentProject - 1].Name}}"><i class="fa fa-angle-left"></i> Previous Post</a></div>
-    <div class="control right"><a ng-href="#/blog/{{workProjects[currentProject + 1].Name}}">Next Post <i class="fa fa-angle-right"></i></a></div>
+  <div  class="bottom-controls">
+    <div ng-hide="firstProject" class="control left">
+      <a ng-href="#/blog/{{workProjects[currentProject - 1].Name}}">
+        <i class="fa fa-angle-left"></i> Previous Post
+      </a>
+    </div>
+    <div ng-hide="lastProject" class="control right">
+      <a ng-href="#/blog/{{workProjects[currentProject + 1].Name}}">
+        Next Post <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
   </div>
 
+</div>
+
+<div ng-show="currentProjects" class="template section">
+  <h1>Hmmmmmmmm....</h1>
+  <div class="content">
+    <p class="small grey">404 Error</p>
+    <p>The project you're looking for doesn't exist. It may have been removed, or may have never existed in the
+      first place. <br/><br/>
+      See whether you can find it in <a href="#/work">Work</a></p>
+  </div>
 </div>

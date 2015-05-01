@@ -1,0 +1,45 @@
+.me {
+  .map {
+    position: relative;
+    min-height: 400px;
+    background: #DDDDDD;
+    border-top: solid 1px $dark-1;
+
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+      border: 0;
+    }
+  }
+
+  .contact {
+    p {
+      margin-top: 15px;
+      color: $grey-dark;
+      line-height: $small-font + 15px;
+    }
+  }
+
+  h3 {
+    margin: 0 0 0 0;
+  }
+
+  a {
+    color: $grey-dark;
+  }
+
+  a:hover {
+    color: $grey-light;
+  }
+
+  hr {
+    border-top: solid 1px $dark-2;
+    margin-top: 0;
+  }
+}

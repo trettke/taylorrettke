@@ -1,4 +1,4 @@
-<div class="template section">
+<div ng-hide="currentArticle" class="template section">
   <div class="header-img" back-img="{{blogPosts[currentArticle].Image}}"></div>
 
   <div class="content">
@@ -10,8 +10,29 @@
   </div>
 
   <div class="bottom-controls">
-    <div class="control left"><a ng-href="#/blog/{{blogPosts[currentArticle - 1].Name}}"><i class="fa fa-angle-left"></i> Previous Post</a></div>
-    <div class="control right"><a ng-href="#/blog/{{blogPosts[currentArticle + 1].Name}}">Next Post <i class="fa fa-angle-right"></i></a></div>
+    <div ng-hide="firstPost" class="control left">
+      <a ng-href="#/blog/{{blogPosts[currentArticle - 1].Name}}">
+        <i class="fa fa-angle-left"></i>
+        Previous Post
+      </a>
+    </div>
+
+    <div ng-hide="lastPost" class="control right">
+      <a ng-href="#/blog/{{blogPosts[currentArticle + 1].Name}}">
+        Next Post
+        <i class="fa fa-angle-right"></i>
+      </a>
+    </div>
   </div>
 
+</div>
+
+<div ng-show="currentArticle" class="template section">
+  <h1>Hmmmmmmmm....</h1>
+  <div class="content">
+    <p class="small grey">404 Error</p>
+    <p>The post you're looking for doesn't exist. It may have been removed, or may have never existed in the
+      first place. <br/><br/>
+      See whether you can find it in <a href="#/blog">Blog Posts</a></p>
+  </div>
 </div>
