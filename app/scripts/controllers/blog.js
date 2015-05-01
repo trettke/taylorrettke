@@ -11,7 +11,7 @@ angular.module('taylorrettkeApp')
     /* VARIABLES
     ------------------------------------------------------------ */
 
-    $scope.blogPosts = blogPosts; //list of Blog Posts and JSON information for each
+    $scope.blogPosts = blogPosts; //list of Blog Posts and JSON information for each one
     $scope.location = $location.url().substring(1); //URL without the first '/'
     $scope.UrlArticle = $scope.location.substring($scope.location.search('/') + 1); //finds the url after the second '/'
     $scope.currentArticle = _.findIndex($scope.blogPosts, { 'Name': $scope.UrlArticle }); // finds the article in blogPosts from URL
