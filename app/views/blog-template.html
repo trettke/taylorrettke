@@ -1,4 +1,4 @@
-<div ng-hide="currentArticle" class="template section">
+<div ng-show="currentArticle >= 0" class="template section">
   <div class="header-img" back-img="{{blogPosts[currentArticle].Image}}"></div>
 
   <div class="content">
@@ -27,7 +27,7 @@
 
 </div>
 
-<div ng-show="currentArticle" class="template section">
+<div ng-show="currentArticle < 0" class="template section">
   <h1>Hmmmmmmmm....</h1>
   <div class="content">
     <p class="small grey">404 Error</p>

@@ -18,6 +18,21 @@ angular.module('taylorrettkeApp').factory('workProjects', function() {
       'Bonsoy containers. I started making these wallets late last year, and people seemed to like the idea...',
       Project: './views/work/recyclabills.html',
       Type: 'work'
+    },
+    {
+      Name: 'redgum-ridge',
+      Title: 'Redgum Ridge Web-platform Prototype',
+      Author: 'Taylor Rettke',
+      Date: '04/05/2015',
+      Feature: false,
+      Link: 'http://www.redgumridge.com.s3-website-ap-southeast-2.amazonaws.com/',
+      Image: './images/redgum-ridge-header.jpg',
+      PreviewImage: './images/redgum-ridge-preview.jpg',
+      Summary: 'This is a prototype I built for an eco-friendly, sustainable and organic farm in the Margaret River' +
+      'district of Western Australia. The site features the...',
+      Project: './views/work/redgum-ridge.html',
+      Type: 'work'
     }
+
   ];
 });

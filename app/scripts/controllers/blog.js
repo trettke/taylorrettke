@@ -28,6 +28,8 @@ angular.module('taylorrettkeApp')
       console.log('Current Article: ' + $scope.currentArticle);
     };
 
+    console.log($scope.currentArticle);
+
     $scope.nextPage = function () {
       $scope.currentArticle = $scope.blogPosts.length - 1 > $scope.currentArticle ? $scope.currentArticle + 1 : $scope.currentArticle;
     };

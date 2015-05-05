@@ -11,5 +11,4 @@ angular.module('taylorrettkeApp')
   .controller('MainCtrl', function ($scope, blogPosts, workProjects) {
     $scope.allStories = blogPosts.concat(workProjects);
     $scope.featureStories = _.filter($scope.allStories, { 'Feature': true });
-    console.log($scope.featureStories);
   });

@@ -1,4 +1,4 @@
-<div ng-hide="currentProject" class="template section">
+<div ng-show="currentProject >= 0" class="template section">
   <div class="header-img" back-img="{{workProjects[currentProject].Image}}"></div>
 
   <div class="content">
@@ -20,12 +20,12 @@
 
   <div  class="bottom-controls">
     <div ng-hide="firstProject" class="control left">
-      <a ng-href="#/blog/{{workProjects[currentProject - 1].Name}}">
+      <a ng-href="#/work/{{workProjects[currentProject - 1].Name}}">
         <i class="fa fa-angle-left"></i> Previous Post
       </a>
     </div>
     <div ng-hide="lastProject" class="control right">
-      <a ng-href="#/blog/{{workProjects[currentProject + 1].Name}}">
+      <a ng-href="#/work/{{workProjects[currentProject + 1].Name}}">
         Next Post <i class="fa fa-angle-right"></i>
       </a>
     </div>
@@ -33,7 +33,7 @@
 
 </div>
 
-<div ng-show="currentProjects" class="template section">
+<div ng-show="currentProject < 0" class="template section">
   <h1>Hmmmmmmmm....</h1>
   <div class="content">
     <p class="small grey">404 Error</p>

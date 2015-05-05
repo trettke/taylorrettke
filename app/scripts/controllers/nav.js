@@ -39,7 +39,6 @@ angular.module('taylorrettkeApp')
     // Toggles the nav menu in and our on small devices
     $scope.toggleNav = function () {
       $scope.navShowing = !$scope.navShowing;
-      console.log($scope.navShowing ? 'Nav is shown' : 'Nav is hidden');
     };
 
     // Track view changes in Google Analytics
