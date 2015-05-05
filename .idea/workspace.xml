@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="684604c5-818f-461c-b94d-61a719a7963b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/work/redgum-ridge.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/blog-template.html" afterPath="$PROJECT_DIR$/app/views/blog-template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/blog.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/blog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/nav.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/nav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/work/recyclabills.html" afterPath="$PROJECT_DIR$/app/views/work/recyclabills.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/work-projects.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/work-projects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/work-template.html" afterPath="$PROJECT_DIR$/app/views/work-template.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/work.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/work.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="684604c5-818f-461c-b94d-61a719a7963b" name="Default" comment="" />
     <ignored path="taylorrettke.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
