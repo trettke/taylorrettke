@@ -35,7 +35,7 @@ angular.module('taylorrettkeApp')
       $scope.navShowing = false; // hide the nav every time a new page loads
       $scope.setParent(); // set the correct parent directory for the nav
 
-      ga('send', 'pageview', {
+      ga('send', 'pageview', { // Track pageviews in google analytics
         page: $location.url(),
         title: $location.url()
       });
@@ -47,9 +47,5 @@ angular.module('taylorrettkeApp')
       console.log($scope.navShowing ? 'Nav is shown' : 'Nav is hidden');
     };
 
-    // Track view changes in Google Analytics
-    $scope.$on('$viewContentLoaded', function() {
-      $window.ga('send', 'pageview', {page: $location.url()});
-    });
 
   });
