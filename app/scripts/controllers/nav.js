@@ -34,6 +34,11 @@ angular.module('taylorrettkeApp')
       console.log('new location : ' + $location.url());
       $scope.navShowing = false; // hide the nav every time a new page loads
       $scope.setParent(); // set the correct parent directory for the nav
+
+      ga('send', 'pageview', { // Track pageviews in google analytics
+        page: $location.url(),
+        title: $location.url()
+      });
     });
 
     // Toggles the nav menu in and our on small devices
@@ -41,9 +46,5 @@ angular.module('taylorrettkeApp')
       $scope.navShowing = !$scope.navShowing;
     };
 
-    // Track view changes in Google Analytics
-    $scope.$on('$viewContentLoaded', function() {
-      $window.ga('send', 'pageview', {page: $location.url()});
-    });
 
   });
