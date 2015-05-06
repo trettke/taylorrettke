@@ -34,6 +34,11 @@ angular.module('taylorrettkeApp')
       console.log('new location : ' + $location.url());
       $scope.navShowing = false; // hide the nav every time a new page loads
       $scope.setParent(); // set the correct parent directory for the nav
+
+      ga('send', 'pageview', {
+        page: $location.url(),
+        title: $location.url()
+      });
     });
 
     // Toggles the nav menu in and our on small devices
